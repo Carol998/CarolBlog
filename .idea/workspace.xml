@@ -7,415 +7,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bd01d93-7837-4418-9cd0-b6802211e38f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/common/CodeCaptchaServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/common/MD5Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/common/PageHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/controller/RegisterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/CommentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/LoginLogMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/ResourceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/RoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/RoleResourceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/RoleUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UpvoteMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UserContentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UserInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/LoginLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Resource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/RoleResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/RoleUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Upvote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/UserContent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/UserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/LoginLogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/ResourceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/RoleResourceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/RoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/RoleUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/UpvoteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/UserContentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/UserInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/CommentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/LoginLogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/ResourceServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/RoleResourceServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/RoleUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/UpvoteServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/UserContentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/UserInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/resources/mapping/user.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/test/java/Blog/Service/UserServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/register/activeFail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/register/activeSuccess.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/register/registerSuccess.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/404/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/404/main.css.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/404/texgyreschola-bold-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/404/texgyreschola-regular-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/bootstrap/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/bootstrap/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/bootstrap/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/bootstrap/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/dreamland.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/js/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/reply/css/comment.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/reply/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/reply/images/header-img-comment_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/reply/images/icon-all_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/reply/js/jquery-1.12.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/reply/js/jquery.flexText.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/reply/json/hf.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/reply/json/pl.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/css/zui-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/css/zui-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/css/zui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/css/zui.lite.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/css/zui.lite.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/css/zui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/fonts/zenicon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/fonts/zenicon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/fonts/zenicon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/fonts/zenicon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/js/zui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/js/zui.lite.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/js/zui.lite.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/js/zui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/array/zui.array.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/array/zui.array.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/board/zui.board.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/board/zui.board.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/board/zui.board.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/board/zui.board.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/bootbox/bootbox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/bootbox/bootbox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/bootbox/bootbox.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/bootbox/bootbox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/calendar/zui.calendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/calendar/zui.calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/calendar/zui.calendar.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/calendar/zui.calendar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/chart/zui.chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/chart/zui.chart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/chosen/chosen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/chosen/chosen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/chosen/chosen.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/chosen/chosen.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/chosenicons/zui.chosenicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/chosenicons/zui.chosenicons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/chosenicons/zui.chosenicons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/chosenicons/zui.chosenicons.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/clipboard/clipboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/clipboard/clipboard.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/colorpicker/zui.colorpicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/colorpicker/zui.colorpicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/colorpicker/zui.colorpicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/colorpicker/zui.colorpicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/colorset.js/zui.colorset.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/colorset.js/zui.colorset.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/dashboard/zui.dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/dashboard/zui.dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/dashboard/zui.dashboard.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/dashboard/zui.dashboard.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/datatable/zui.datatable.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/datatable/zui.datatable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/datatable/zui.datatable.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/datatable/zui.datatable.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/datetimepicker/datetimepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/datetimepicker/datetimepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/datetimepicker/datetimepicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/datetimepicker/datetimepicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/hotkey/hotkey.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/hotkey/hotkey.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/ieonly/excanvas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/ieonly/html5shiv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/ieonly/respond.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/imgcutter/zui.imgcutter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/imgcutter/zui.imgcutter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/imgcutter/zui.imgcutter.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/imgcutter/zui.imgcutter.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/imgready/imgready.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/imgready/imgready.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/jquery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/kindeditor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/kindeditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/kindeditor.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/kindeditor.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/lang/en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/lang/zh_CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/lang/zh_TW.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/baidumap/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/baidumap/map.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/code/prettify.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/code/prettify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/100.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/101.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/102.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/103.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/104.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/105.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/106.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/107.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/108.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/109.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/110.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/111.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/112.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/113.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/114.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/115.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/116.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/117.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/118.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/119.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/120.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/121.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/122.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/123.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/124.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/125.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/126.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/127.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/128.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/129.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/13.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/130.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/131.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/132.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/133.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/134.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/14.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/15.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/17.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/18.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/19.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/20.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/21.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/22.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/23.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/24.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/25.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/26.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/27.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/28.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/29.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/30.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/31.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/32.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/33.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/34.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/35.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/36.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/37.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/38.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/39.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/40.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/41.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/42.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/43.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/44.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/45.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/46.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/47.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/48.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/49.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/50.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/51.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/52.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/53.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/54.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/55.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/56.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/57.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/58.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/59.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/60.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/61.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/62.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/63.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/64.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/65.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/66.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/67.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/68.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/69.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/70.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/71.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/72.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/73.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/74.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/75.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/76.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/77.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/78.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/79.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/80.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/81.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/82.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/83.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/84.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/85.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/86.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/87.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/88.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/89.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/90.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/91.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/92.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/93.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/94.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/95.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/96.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/97.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/98.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/99.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/emoticons/images/static.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/filemanager/images/file-16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/filemanager/images/file-64.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/filemanager/images/folder-16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/filemanager/images/folder-64.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/filemanager/images/go-up.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/image/images/align_left.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/image/images/align_right.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/image/images/align_top.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/image/images/refresh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/map/map.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/multiimage/images/image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/multiimage/images/select-files-en.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/multiimage/images/select-files-zh_CN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/multiimage/images/swfupload.swf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/ok.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/template/html/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/template/html/2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/plugins/template/html/3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/kindeditor/themes/default/default.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/migrate1.2/zui.migrate1.2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/migrate1.2/zui.migrate1.2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-apollo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-basic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-clj.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-css.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-dart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-erlang.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-go.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-hs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-lisp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-llvm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-lua.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-matlab.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-ml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-mumps.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-n.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-pascal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-proto.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-r.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-rd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-scala.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-sql.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-tcl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-tex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-vb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-vhdl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-wiki.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-xq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/lang-yaml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/prettify.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/prettify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/prettify/run_prettify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/selectable/zui.selectable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/selectable/zui.selectable.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/sortable/zui.sortable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/sortable/zui.sortable.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/treemap/zui.treemap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/treemap/zui.treemap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/treemap/zui.treemap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/treemap/zui.treemap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/ueditor/ueditor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/ueditor/ueditor.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/uploader/Moxie.swf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/uploader/Moxie.xap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/uploader/zui.uploader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/uploader/zui.uploader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/uploader/zui.uploader.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/css/zui/lib/uploader/zui.uploader.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/images/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/images/2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/images/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/images/404.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/images/404_s-divider.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/images/404_search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/images/QQ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/images/bg_noise.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/images/dreamland.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/images/icon_m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/images/kj.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/images/m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/images/q.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/images/wx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/js/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/mail/MailExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/mail/MyAuthenticator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/mail/SendEmail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/resources/applicationContext-redis.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/resources/redis.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/register/fail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/images/img.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BlogWeb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/resources/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/LoginLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/LoginLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Resource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/RoleResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/RoleResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/RoleUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/RoleUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Upvote.java" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Upvote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/UserContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/UserContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/UserInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/resources/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/resources/spring-mvc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/resources/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/resources/spring-mybatis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/register/registerSuccess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/register/registerSuccess.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/src/main/webapp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/LoginLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/LoginLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/Resource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/Resource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/RoleResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/RoleResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/RoleUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/RoleUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/Upvote.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/Upvote.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/UserContent.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/UserContent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/Blog/entity/UserInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/spring-mvc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/classes/spring-mybatis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/lib/mysql-connector-java-5.1.29.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/register/registerSuccess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/register/registerSuccess.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlogWeb/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlogWeb/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/classes/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlogWeb/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/BlogWeb/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/LoginLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/LoginLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/Resource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/Resource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/RoleResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/RoleResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/RoleUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/RoleUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/Upvote.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/Upvote.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/UserContent.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/UserContent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/classes/Blog/entity/UserInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BlogWeb/target/classes/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/classes/spring-mvc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BlogWeb/target/classes/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BlogWeb/target/classes/spring-mybatis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarolBlog.iml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/BlogWeb/target/" />
@@ -431,33 +74,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/webapp/register.jsp">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/mail/MailExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="25" column="47" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="47" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#4;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#6;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#IMG#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#7;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="152">
+              <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/controller/RegisterController.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/mail/MyAuthenticator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="754">
-              <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+            <state relative-caret-position="172">
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/mail/SendEmail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1612">
+              <caret line="62" column="1" lean-forward="true" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -472,6 +111,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -481,45 +121,56 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/RoleUserService.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/common/PageHelper.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/UserContentService.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/CommentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/LoginLogServiceImpl.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/ResourceServiceImpl.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/RoleResourceServiceImpl.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/RoleServiceImpl.java" />
         <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/RoleUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/UpvoteServiceImpl.java" />
         <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/UserContentServiceImpl.java" />
         <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/UserInfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/User.java" />
         <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/UserService.java" />
         <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/BlogWeb/src/main/resources/jadc.properties" />
         <option value="$PROJECT_DIR$/BlogWeb/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/BlogWeb/src/main/resources/mapping/userMapping.xml" />
         <option value="$PROJECT_DIR$/BlogWeb/src/main/test/java/Blog/Service/UserServiceTest.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/resources/spring-mybatis.xml" />
         <option value="$PROJECT_DIR$/BlogWeb/src/main/resources/mybatis-config.xml" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UpvoteMapper.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UserInfoMapper.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UserContentMapper.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/RoleUserMapper.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/RoleResourceMapper.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/RoleMapper.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/ResourceMapper.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/LoginLogMapper.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/CommentMapper.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UserMapper.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/resources/spring-mvc.xml" />
         <option value="$PROJECT_DIR$/BlogWeb/src/main/resources/mapping/user.xml" />
-        <option value="$PROJECT_DIR$/BlogWeb/pom.xml" />
         <option value="$PROJECT_DIR$/BlogWeb/src/main/resources/jdbc.properties" />
         <option value="$PROJECT_DIR$/BlogWeb/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/common/CodeCaptchaServlet.java" />
-        <option value="$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/resources/applicationContext-redis.xml" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/resources/redis.properties" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/register/registerFail.jsp" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/register/register.jsp" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/register/registFail.jsp" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/mail/MyAuthenticator.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/mail/MailExample.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/register/fail.jsp" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/register/registerSuccess.jsp" />
         <option value="$PROJECT_DIR$/BlogWeb/src/main/webapp/register.jsp" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Comment.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/LoginLog.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Resource.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Role.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/RoleResource.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/RoleUser.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Upvote.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/User.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/UserContent.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/UserInfo.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/resources/spring-mvc.xml" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/resources/spring-mybatis.xml" />
+        <option value="$PROJECT_DIR$/BlogWeb/pom.xml" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/CommentMapper.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/LoginLogMapper.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/ResourceMapper.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/RoleMapper.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/RoleResourceMapper.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/RoleUserMapper.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UpvoteMapper.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UserContentMapper.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UserInfoMapper.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UserMapper.java" />
+        <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/mail/SendEmail.java" />
         <option value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/controller/RegisterController.java" />
       </list>
     </option>
@@ -538,11 +189,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="797" />
-    <option name="y" value="37" />
-    <option name="width" value="1147" />
-    <option name="height" value="1043" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="438" />
+    <option name="width" value="1409" />
+    <option name="height" value="1065" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -552,6 +202,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -602,7 +254,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Blog" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="mail" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CarolBlog" type="b2602c69:ProjectViewProjectNode" />
@@ -610,9 +262,7 @@
               <item name="BlogWeb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Blog" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CarolBlog" type="b2602c69:ProjectViewProjectNode" />
@@ -630,30 +280,18 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CarolBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CarolBlog" type="462c0819:PsiDirectoryNode" />
-              <item name="BlogWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="register" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/BlogWeb/src/main/java/Blog/common" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/register" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
@@ -664,11 +302,11 @@
       <recent name="E:\CarolBlog\BlogWeb\src\main\java" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\CarolBlog\BlogWeb\src\main\java\Blog\common" />
       <recent name="E:\CarolBlog\BlogWeb\src\main\webapp\WEB-INF\register" />
+      <recent name="E:\CarolBlog\BlogWeb\src\main\webapp\images" />
+      <recent name="E:\CarolBlog\BlogWeb\src\main\java\Blog\mail" />
+      <recent name="E:\CarolBlog\BlogWeb\src\main\java\Blog\common" />
       <recent name="E:\CarolBlog\BlogWeb\src\main\webapp" />
-      <recent name="E:\CarolBlog\BlogWeb\src\main\webapp\css" />
-      <recent name="E:\CarolBlog\BlogWeb\src\main\java\Blog\dao" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -683,7 +321,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.carolBlog">
+  <component name="RunManager" selected="Application.MailExample">
+    <configuration name="MailExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Blog.mail.MailExample" />
+      <module name="BlogWeb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Blog.mail.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserServiceTest.testSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BlogWeb" />
       <extension name="coverage">
@@ -773,11 +424,13 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.MailExample" />
       <item itemvalue="JUnit.UserServiceTest.testSave" />
       <item itemvalue="Tomcat Server.carolBlog" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MailExample" />
         <item itemvalue="JUnit.UserServiceTest.testSave" />
       </list>
     </recent_temporary>
@@ -795,6 +448,12 @@
       <workItem from="1562398066023" duration="5309000" />
       <workItem from="1562463567270" duration="19000" />
       <workItem from="1562468384546" duration="10220000" />
+      <workItem from="1562651695570" duration="3006000" />
+      <workItem from="1562674087735" duration="1221000" />
+      <workItem from="1562719970889" duration="3241000" />
+      <workItem from="1562737232115" duration="1137000" />
+      <workItem from="1562756650861" duration="5730000" />
+      <workItem from="1562806141408" duration="1962000" />
     </task>
     <servers />
   </component>
@@ -831,12 +490,22 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15548000" />
+    <option name="totallyTimeSpent" value="31845000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="351" y="0" width="1127" height="852" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2219973" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28706327" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -846,20 +515,20 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.055882353" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.42205882" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2651297" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32941177" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.32941177" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32941177" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32941177" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32941177" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.33970588" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -916,373 +585,8 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/common/PageHelper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/UserContentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/LoginLogServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="59" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/ResourceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="59" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/RoleResourceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="67" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/RoleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/RoleUserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="59" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/UpvoteServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/UserContentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/UserInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="59" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Resource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/RoleUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Upvote.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/UserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/LoginLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-52">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/UserContent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <element signature="e#297#298#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#444#445#0" expanded="true" />
-            <element signature="e#486#487#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#586#587#0" expanded="true" />
-            <element signature="e#634#635#0" expanded="true" />
-            <element signature="e#674#675#0" expanded="true" />
-            <element signature="e#706#707#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-            <element signature="e#845#846#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
-            <element signature="e#924#925#0" expanded="true" />
-            <element signature="e#964#965#0" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1066#1067#0" expanded="true" />
-            <element signature="e#1100#1101#0" expanded="true" />
-            <element signature="e#1133#1134#0" expanded="true" />
-            <element signature="e#1162#1163#0" expanded="true" />
-            <element signature="e#1206#1207#0" expanded="true" />
-            <element signature="e#1242#1243#0" expanded="true" />
-            <element signature="e#1275#1276#0" expanded="true" />
-            <element signature="e#1304#1305#0" expanded="true" />
-            <element signature="e#1348#1349#0" expanded="true" />
-            <element signature="e#1384#1385#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UserInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UserContentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UpvoteMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/RoleUserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/RoleResourceMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/RoleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/ResourceMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/LoginLogMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/CommentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/CommentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/CommentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#1441#1442#0" expanded="true" />
-            <element signature="e#1501#1502#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/resources/spring-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="12" column="46" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/resources/spring-mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-546">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/resources/mapping/user.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis-spring/1.2.2/mybatis-spring-1.2.2.jar!/org/mybatis/spring/SqlSessionTemplate.class">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5408">
-          <caret line="208" column="26" selection-start-line="208" selection-start-column="26" selection-end-line="208" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/webapp/css/js/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1307,34 +611,10 @@
     <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/webapp/js/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/register/activeFail.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/common/MD5Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="65" column="30" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1345,10 +625,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/common/MD5Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="65" column="35" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="35" />
+          <folding>
+            <element signature="e#1485#1486#0" expanded="true" />
+            <element signature="e#1542#1543#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/register/registFail.jsp" />
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/register/fail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/data/spring-data-redis/1.7.1.RELEASE/spring-data-redis-1.7.1.RELEASE.jar!/org/springframework/data/redis/core/RedisTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/register/activeFail.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/register/activeSuccess.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="70" column="52" lean-forward="true" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/register/registerSuccess.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="143" column="34" selection-start-line="143" selection-start-column="34" selection-end-line="143" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/webapp/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="25" column="47" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="47" />
+        <state relative-caret-position="156">
+          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1365,13 +696,332 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/controller/RegisterController.java">
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Comment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        <state relative-caret-position="130">
+          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/LoginLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Resource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/RoleResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/RoleUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/Upvote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/UserContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/entity/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/resources/mapping/user.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/resources/applicationContext-redis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+          <folding>
+            <element signature="e#728#741#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/resources/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/resources/redis.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/resources/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-660">
+          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#1441#1442#0" expanded="true" />
+            <element signature="e#1501#1502#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/resources/spring-mybatis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="273" column="31" selection-start-line="273" selection-start-column="31" selection-end-line="273" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/LoginLogMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/RoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/RoleResourceMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UpvoteMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UserContentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UserInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/CommentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/ResourceMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/dao/RoleUserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/controller/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-448">
+          <caret line="140" column="45" lean-forward="true" selection-start-line="140" selection-start-column="45" selection-end-line="140" selection-end-column="45" />
+          <folding>
+            <element signature="e#6027#6028#0" expanded="true" />
+            <element signature="e#6063#6064#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/mail/MyAuthenticator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/mail/SendEmail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1612">
+          <caret line="62" column="1" lean-forward="true" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogWeb/src/main/java/Blog/mail/MailExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
         </state>
       </provider>
     </entry>

@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<c:set var="ctx" value="${pageContext.request.contextPath }"/>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <!doctype html>
 <html lang="en">
 <head>
@@ -110,7 +110,7 @@
 
     //校验手机号
     var v = 0;
-    var flag2 = false;      //手机输入框状态
+    var flag2 = false;
     function checkPhone(){
         var phone = $("#phone").val();
         phone = phone.replace(/^\s+|\s+$/g,"");

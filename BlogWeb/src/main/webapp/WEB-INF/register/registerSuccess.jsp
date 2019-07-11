@@ -96,10 +96,10 @@
 
         <div class="single-clear">
 
-     </div>
+        </div>
 
         <div class="register-active">
-           <span style="font-size: 15px;font-weight: bold;padding: 20px;line-height: 100px">激活邮件已经发送到您的注册邮箱${message.split(",")[0]},点击邮件里的链接即可激活账号。</span><br/>
+            <span style="font-size: 15px;font-weight: bold;padding: 20px;line-height: 100px">激活邮件已经发送到您的注册邮箱${message.split(",")[0]},点击邮件里的链接即可激活账号。</span><br/>
             <button style="margin-left: 20px;" class="btn btn-primary" type="button" onclick="lookEmail('${message}');">立即查看邮件</button>
         </div>
 
@@ -229,7 +229,7 @@
             </div>
         </div>
 
-</div>
+    </div>
 
 </div>
 <script type="text/javascript" src="${ctx}/js/jquery-3.2.1.min.js"></script>
@@ -244,6 +244,45 @@
     function hideImg(){
         document.getElementById("wxImg").style.display='none';
     }
-   
+
+    function lookEmail(message) {
+        var arr = message.split(",");
+        var email = arr[0];
+        var opt = email.split("@")[1];
+        if("qq.com"==opt){
+            location.href = "https://mail.qq.com/";
+        }else if("163.com"==opt){
+            location.href = "https://mail.163.com/";
+        }else if("162.com"==opt){
+            location.href = "https://mail.162.com/";
+        }else if("sina.com"==opt){
+            location.href = "http://mail.sina.com.cn/";
+        }else if("sohu"==opt){
+            location.href = "https://mail.sohu.com";
+        }
+    }
+
+    function reSendEmail(message) {
+        var arr = message.split(",");
+        var email = arr[0];
+        var code = arr[1];
+        $.ajax({
+            type:'post',
+            url:'/sendEmail',
+            data: {"email":email,"validateCode":code},
+            dataType:'json',
+            success:function(data){
+                //alert(data["success"])
+                var s = data["success"];
+                if(s=="success"){
+                    alert("发送成功！");
+                }
+            }
+        });
+    }
+
+    function reRegist() {
+        location.href = "../register.jsp";
+    }
 </script>
 </html>

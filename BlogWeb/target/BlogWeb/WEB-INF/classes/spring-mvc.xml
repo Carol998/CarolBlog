@@ -12,7 +12,7 @@
 
     <mvc:default-servlet-handler />
     <!-- 自动扫描 -->
-    <context:component-scan base-package="Blog.controller"/>
+    <context:component-scan base-package="Blog"/>
 
     <!--避免IE执行AJAX时，返回JSON出现下载文件 -->
     <bean id="mappingJacksonHttpMessageConverter"
