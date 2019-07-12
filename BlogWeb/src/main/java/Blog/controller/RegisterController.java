@@ -1,6 +1,7 @@
 package Blog.controller;
 
 import Blog.common.CodeCaptchaServlet;
+import Blog.common.Constant;
 import Blog.common.MD5Util;
 import Blog.entity.User;
 import Blog.mail.SendEmail;
@@ -125,7 +126,7 @@ public class RegisterController {
         User user = new User();
         user.setPhone(phone);
         user.setEmail(email);
-        user.setPassword(MD5Util.encodeToHex("salt"+password));
+        user.setPassword(MD5Util.encodeToHex(Constant.SALT +password));
         user.setNickName(nickName);
         user.setImgUrl("/images/img.jpg");
         //用于用户激活，state为0时表示该用户未激活
@@ -134,7 +135,7 @@ public class RegisterController {
         //生成邮件激活码
         String emailCode = MD5Util.encodeToHex("salt"+email+password);
         //24小时有效，保存激活码
-        redisTemplate.opsForValue().set(email,emailCode, 24, TimeUnit.HOURS);
+        redisTemplate.opsForValue().set(email,code, 24, TimeUnit.HOURS);
         userService.register(user);
         //发送邮件激活码
         SendEmail.sendEmailMessage(email,emailCode);
@@ -161,6 +162,11 @@ public class RegisterController {
             return 0;
     }
 
+    /**
+     * 激活成功后，再次发送邮件接口
+     * @param model
+     * @return
+     */
     @RequestMapping("/sendEmail")
     @ResponseBody
     public Map<String,Object> sendEmail(Model model){
@@ -177,5 +183,43 @@ public class RegisterController {
     @RequestMapping("/register")
     public String register(Model model){
         return "../register";
+    }
+
+    /**
+     * 邮件激活
+     * @param model
+     * @return
+     */
+    @RequestMapping("/activecode")
+    public String active(Model model){
+        ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        String vcode = (String) attributes.getRequest().getSession().getAttribute(CodeCaptchaServlet.VERCODE_KEY);
+        String email = attributes.getRequest().getParameter("email");
+        String code = redisTemplate.opsForValue().get(email);
+
+        //首先判断该用户是否以及被激活
+        User u = userService.findByEmail(email);
+        if(u!=null && u.getState().equals("1")){
+            model.addAttribute("success","该账户已激活，请登陆");
+            return "../login";
+        }
+
+        //验证码是否过期
+        if(code == null){
+            model.addAttribute("fail","验证码过期，请重新注册");
+            userService.deleteByEmail(email);
+            return "/register/activeFail";
+        }
+
+        if(StringUtils.isNotBlank(vcode) && vcode.equals(code) ){
+            User user = userService.findByEmail(email);
+            user.setState("1");
+            user.setEnable("1");
+            userService.update(user);
+            model.addAttribute("email","验证码正确，激活成功");
+            return "/register/activeSuccess";
+        }
+        model.addAttribute("fail","激活码错误，请重新激活");
+        return "/register/activeFail";
     }
 }

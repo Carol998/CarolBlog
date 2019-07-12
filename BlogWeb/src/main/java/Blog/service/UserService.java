@@ -12,7 +12,7 @@ public interface UserService {
 
     User findByPhone(String phone);
 
-    User findById(String id);
+    User findById(Long id);
 
     void deleteByEmail(String email);
 
