@@ -13,4 +13,8 @@ public interface CommentService {
     List<Comment> findAllChildrenComment(@Param("cid") long cid,@Param("children") String children);
 
     int insertComment(Comment comment);
+
+    Comment findById(Long id);
+
+    int update(Comment comment);
 }

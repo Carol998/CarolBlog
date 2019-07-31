@@ -203,6 +203,7 @@
                             <span class="stats-vote"><i id="${cont.id}" class="number">${cont.upvote}</i> 赞</span>
                             <span class="stats-comments">
                     <span class="dash"> · </span>
+                                <!--点击评论与回复-->
                          <a  onclick="reply(${cont.id},${cont.uId});">
                               <i class="number" id="comment_num_${cont.id}">${cont.commentNum}</i> 评论
                           </a>
@@ -238,6 +239,7 @@
                         <br/>
                         &nbsp;
                         <div class="commentAll" style="display:none" id="comment_reply_${cont.id}">
+                            <!--输入评论内容-->
                             <!--评论区域 begin-->
                             <div class="reviewArea clearfix">
                                 <textarea id="comment_input_${cont.id}"  class="content comment-input" placeholder="输入内容&hellip;" onkeyup="keyUP(this)"></textarea>
@@ -258,11 +260,7 @@
                     <div style="position: absolute;width:900px;background-color: #EBEBEB;height: 10px;left: 0px">
                     </div>
                 </c:forEach>
-
             </div>
-
-
-
 
 
             <div id="page-info" style="position: absolute;width:900px;background-color: #EBEBEB;height: 80px;left: 0px;">
@@ -492,11 +490,13 @@
     }
 
     //点击评论或者回复图标
+    //传入的参数为文章id与文章作者id
     function reply(id,uid) {
         $("div").remove("#comment_reply_"+id+" .comment-show");
         $("div").remove("#comment_reply_"+id+" .comment-show-con");
         if(showdiv_display = document.getElementById('comment_reply_'+id).style.display=='none'){//如果show是隐藏的
 
+            //请求参数为文章id
             document.getElementById('comment_reply_'+id).style.display='block';//show的display属性设置为block（显示）
             $.ajax({
                 type:'post',
@@ -508,6 +508,7 @@
 
                     var okHtml;
                     if(list!=null && list!=""){
+                        //对得到的文章评论列表进行一个遍历访问，并将评论拼接到div中
                         $(list).each(function () {
                             var chtml = "<div class='comment-show'>"+
                                 "<div class='comment-show-con clearfix'>"+
@@ -575,7 +576,7 @@
         }
     }
 
-    //点击评论按钮
+    //点击评论按钮，
     function _comment(content_id,uid,cuid) {
         var myDate = new Date();
         //获取当前年
@@ -597,7 +598,7 @@
 
         if(oSize.replace(/(^\s*)|(\s*$)/g, "") != ''){
 
-
+            <!--发送ajax请求的参数为：文章id，评论用户id，评论内容oSize，评论时间now-->
             $.ajax({
                 type:'post',
                 url:'/comment',

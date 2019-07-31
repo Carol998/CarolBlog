@@ -3,26 +3,69 @@ package Blog.entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.util.Date;
+import java.util.List;
 
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //评论id
     private Long id;
 
+    //文章id
     private Long conId;
 
+    //评论者id
     private Long comId;
 
+    //被评论者id
     private Long byId;
 
+    //评论时间
     private Date commTime;
 
+    //子评论ids
     private String children;
 
+    //评论点赞数
     private Integer upvote;
 
+    //评论内容
     private String comContent;
+
+    @Transient
+    private User user;
+
+    @Transient
+    private User byUser;
+
+    @Transient
+    private List<Comment> comList;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public User getByUser() {
+        return byUser;
+    }
+
+    public void setByUser(User byUser) {
+        this.byUser = byUser;
+    }
+
+    public List<Comment> getComList() {
+        return comList;
+    }
+
+    public void setComList(List<Comment> comList) {
+        this.comList = comList;
+    }
 
     public Long getId() {
         return id;

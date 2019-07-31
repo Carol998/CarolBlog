@@ -21,7 +21,7 @@ public class CommentServiceImpl implements CommentService {
      */
     @Override
     public List<Comment> selectAll(long cid) {
-        return null;
+        return commentMapper.selectAll(cid);
     }
 
     /**
@@ -31,7 +31,7 @@ public class CommentServiceImpl implements CommentService {
      */
     @Override
     public List<Comment> findAllFirstComment(long cid) {
-        return null;
+        return commentMapper.findAllFirstComment(cid);
     }
 
     /**
@@ -42,7 +42,7 @@ public class CommentServiceImpl implements CommentService {
      */
     @Override
     public List<Comment> findAllChildrenComment(long cid, String children) {
-        return null;
+        return commentMapper.findAllChildrenComment(cid,children);
     }
 
     /**
@@ -52,6 +52,21 @@ public class CommentServiceImpl implements CommentService {
      */
     @Override
     public int insertComment(Comment comment) {
-        return 0;
+        return commentMapper.insertComment(comment);
+    }
+
+    /**
+     * 根据id查找评论
+     * @param id
+     * @return
+     */
+    @Override
+    public Comment findById(Long id) {
+        return commentMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public int update(Comment comment) {
+        return commentMapper.updateByPrimaryKey(comment);
     }
 }
