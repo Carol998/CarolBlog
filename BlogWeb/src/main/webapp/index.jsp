@@ -203,7 +203,6 @@
                             <span class="stats-vote"><i id="${cont.id}" class="number">${cont.upvote}</i> 赞</span>
                             <span class="stats-comments">
                     <span class="dash"> · </span>
-                                <!--点击评论与回复-->
                          <a  onclick="reply(${cont.id},${cont.uId});">
                               <i class="number" id="comment_num_${cont.id}">${cont.commentNum}</i> 评论
                           </a>
@@ -239,7 +238,6 @@
                         <br/>
                         &nbsp;
                         <div class="commentAll" style="display:none" id="comment_reply_${cont.id}">
-                            <!--输入评论内容-->
                             <!--评论区域 begin-->
                             <div class="reviewArea clearfix">
                                 <textarea id="comment_input_${cont.id}"  class="content comment-input" placeholder="输入内容&hellip;" onkeyup="keyUP(this)"></textarea>
@@ -260,7 +258,11 @@
                     <div style="position: absolute;width:900px;background-color: #EBEBEB;height: 10px;left: 0px">
                     </div>
                 </c:forEach>
+
             </div>
+
+
+
 
 
             <div id="page-info" style="position: absolute;width:900px;background-color: #EBEBEB;height: 80px;left: 0px;">
@@ -454,7 +456,7 @@
         if(s<10) s = '0' + s;
         return date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" "+h+':'+m+":"+s;
     }
-    //点赞或踩,cont为点赞或者踩的常量
+    //点赞或踩
     function upvote_click(id,cont) {
 
         $.ajax({
@@ -490,13 +492,11 @@
     }
 
     //点击评论或者回复图标
-    //传入的参数为文章id与文章作者id
     function reply(id,uid) {
         $("div").remove("#comment_reply_"+id+" .comment-show");
         $("div").remove("#comment_reply_"+id+" .comment-show-con");
         if(showdiv_display = document.getElementById('comment_reply_'+id).style.display=='none'){//如果show是隐藏的
 
-            //请求参数为文章id
             document.getElementById('comment_reply_'+id).style.display='block';//show的display属性设置为block（显示）
             $.ajax({
                 type:'post',
@@ -508,7 +508,6 @@
 
                     var okHtml;
                     if(list!=null && list!=""){
-                        //对得到的文章评论列表进行一个遍历访问，并将评论拼接到div中
                         $(list).each(function () {
                             var chtml = "<div class='comment-show'>"+
                                 "<div class='comment-show-con clearfix'>"+
@@ -576,7 +575,7 @@
         }
     }
 
-    //点击评论按钮，
+    //点击评论按钮
     function _comment(content_id,uid,cuid) {
         var myDate = new Date();
         //获取当前年
@@ -598,7 +597,7 @@
 
         if(oSize.replace(/(^\s*)|(\s*$)/g, "") != ''){
 
-            <!--发送ajax请求的参数为：文章id，评论用户id，评论内容oSize，评论时间now-->
+
             $.ajax({
                 type:'post',
                 url:'/comment',
@@ -696,7 +695,7 @@
         }
     }
 
-    //点赞
+    //点赞 给评论点赞
     function reply_up(id) {
         var num = document.getElementById("comment_upvote_"+id).innerHTML;
         if($("#change_color_"+id).is('.date-dz-z-click')){
@@ -726,7 +725,7 @@
         });
     }
 
-    //点击一级评论块的评论按钮
+    //点击一级评论块的评论按钮  传入参数：文章id，评论id,一级评论id,被评论者id，评论者id
     function comment_pl(content_id,comment_id,fid,by_id,cuid) {
         if(fid==null){
             fid = comment_id
@@ -753,7 +752,6 @@
         var oAllVal = '回复@'+oHfName;
 
         if(oHfVal.replace(/^ +| +$/g,'') == '' || oHfVal == oAllVal){
-
         }else {
             $.ajax({
                 type:'post',

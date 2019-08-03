@@ -5,7 +5,9 @@ import Blog.entity.Comment;
 import Blog.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tk.mybatis.mapper.entity.Example;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -68,5 +70,25 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public int update(Comment comment) {
         return commentMapper.updateByPrimaryKey(comment);
+    }
+
+    @Override
+    public void deleteCommentById(Long id) {
+        Comment comment = new Comment();
+        comment.setId(id);
+        commentMapper.deleteByPrimaryKey(comment);
+    }
+
+    @Override
+    public void deleteChildrenCom(String children) {
+        Example example = new Example(Comment.class);
+        Example.Criteria criteria = example.createCriteria();
+        List<Object> list = new ArrayList<Object>();
+        String[] split = children.split(",");
+        for(int i=0;i<split.length;i++){
+            list.add(split[i]);
+        }
+        criteria.andIn("id",list);
+        commentMapper.deleteByExample(example);
     }
 }

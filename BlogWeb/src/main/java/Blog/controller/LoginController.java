@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -26,7 +27,7 @@ public class LoginController extends BaseController{
         return "../login";
     }
 
-    @RequestMapping("/doLogin")
+    @RequestMapping(value = "/doLogin",method = RequestMethod.POST)
     public String doLogin(Model model,
                           @RequestParam(value = "username",required = false) String email,
                           @RequestParam(value = "password",required = false) String password,
@@ -59,8 +60,9 @@ public class LoginController extends BaseController{
                 return "../login";
             }
             else {
+                getSession().setAttribute("user",user);
                 model.addAttribute("user",user);
-                return "/personal/personal";
+                return "redirect:/list";
             }
         }
         else {

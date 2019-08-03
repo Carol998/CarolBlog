@@ -2,6 +2,7 @@ package Blog.controller;
 
 import Blog.common.DateUtils;
 import Blog.common.PageHelper;
+import Blog.common.StringUtil;
 import Blog.entity.Comment;
 import Blog.entity.Upvote;
 import Blog.entity.User;
@@ -10,6 +11,7 @@ import Blog.service.CommentService;
 import Blog.service.UpvoteService;
 import Blog.service.UserContentService;
 import Blog.service.UserService;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -223,6 +225,135 @@ public class IndexJspController extends BaseController{
             Comment c = commentService.findById(id);
             c.setUpvote(upvote);
             commentService.update(c);
+        }
+        return map;
+    }
+
+    /**
+     * 删除评论
+     * @param model
+     * @param id
+     * @param uid
+     * @param con_id
+     * @param fid
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("/deleteComment")
+    public Map<String,Object> deleteComment(Model model,
+                                            @RequestParam(value = "id",required = false)Long id,
+                                            @RequestParam(value = "uid",required = false) Long uid,
+                                            @RequestParam(value = "con_id",required = false) Long con_id,
+                                            @RequestParam(value = "fid",required = false) Long fid){
+        int num = 0;
+        Map<String,Object> map = new HashMap<>();
+        User user = (User)getSession().getAttribute("user");
+        if(user==null){
+            //用户未登陆，跳转登录页面
+            map.put("data","fail");
+            return map;
+        }
+        else {
+            if(user.getId().equals(uid)){
+                Comment comment = commentService.findById(id);
+                if(StringUtils.isBlank(comment.getChildren())){
+                    //当前评论对象无子评论
+                    if(fid!=null){
+                        //当前评论对象无子评论且具有父评论
+                        Comment fcomment = commentService.findById(fid);
+                        //删除该父评论下子评论中的该评论id
+                        String c = StringUtil.getString(fcomment.getChildren(),id);
+                        fcomment.setChildren(c);
+                        commentService.update(fcomment);
+                    }
+                    //当前评论对象无子评论且无父评论，直接删除
+                    commentService.deleteCommentById(id);
+                    num = num+1;
+                }
+                else {   //该评论具有子评论
+                    String children = comment.getChildren();
+                    commentService.deleteChildrenCom(children);
+                    String[] arr = children.split(",");
+                    commentService.deleteCommentById(id);
+                    num=num+arr.length+1;
+                }
+                UserContent userContent = userContentService.findById(con_id);
+                if(userContent!=null){
+                    if(userContent.getCommentNum()-num>0){
+                        userContent.setCommentNum(userContent.getCommentNum()-num);
+                    }else {
+                        userContent.setCommentNum(0);
+                    }
+                    userContentService.updateById(userContent);
+                }
+                map.put("data",userContent.getCommentNum());
+            }
+            else {
+                //当前用户不是该文章用户，无权限
+                map.put("data","no-access");
+            }
+        }
+        return map;
+    }
+
+    /**
+     *对一级评论进行评论
+     * @param model
+     * @param id  一级评论id
+     * @param conid 文章id
+     * @param uid  评论用户id
+     * @param bid   被评论者id
+     * @param oSize   评论内容
+     * @param comment_time  评论时间
+     * @param upvote
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("/comment_child")
+    public Map<String,Object> comment_Children(Model model,
+                                               @RequestParam(value = "id",required = false)Long id,
+                                               @RequestParam(value = "content_id",required = false)Long conid,
+                                               @RequestParam(value = "uid",required = false)Long uid,
+                                               @RequestParam(value = "by_id",required = false)Long bid,
+                                               @RequestParam(value = "oSize",required = false)String oSize,
+                                               @RequestParam(value = "comment_time",required = false)String comment_time,
+                                               @RequestParam(value = "upvote",required = false)Integer upvote){
+        Map map = new HashMap<String,Object>();
+        User user = (User) getSession().getAttribute("user");
+        if(user == null){
+            //当前用户未登陆
+            map.put("data","fail");
+            return map;
+        }
+        else {
+            //在comment表中添加评论
+            Comment comment = new Comment();
+            comment.setCommTime(DateUtils.StringToDate(comment_time,"yyyy-MM-dd HH:mm:ss"));
+            comment.setComContent(oSize);
+            comment.setConId(conid);
+            comment.setComId(uid);
+            if(upvote==null)
+                upvote = 0;
+            comment.setUpvote(upvote);
+            comment.setById(bid);
+            User user1 = userService.findById(uid);
+            comment.setUser(user1);
+            commentService.update(comment);
+
+            //在一级评论中添加该新增评论的信息
+            Comment fcomment = commentService.findById(id);
+            if(StringUtils.isBlank(fcomment.getChildren())){
+                //子评论为空，则直接添加
+                fcomment.setChildren(comment.getId().toString());
+            }else {
+                fcomment.setChildren(fcomment.getChildren()+","+comment.getId());
+            }
+            commentService.update(fcomment);
+            map.put("data",comment);
+
+            UserContent userContent = userContentService.findById(conid);
+            userContent.setCommentNum(userContent.getCommentNum()+1);
+            userContentService.updateById(userContent);
         }
         return map;
     }

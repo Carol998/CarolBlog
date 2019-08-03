@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Blog.dao.UserContentMapper">
+
+    <resultMap id="categoryMap" type="Blog.entity.UserContent">
+        <id property="id" column="id" />
+        <result property="category" column="category"/>
+        <result property="num" column="num"/>
+    </resultMap>
+
+   <select id="findCategoryByUid" resultMap="categoryMap">
+       select category,count(1) as num from user_content
+       where u_id =#{uid} and personal = '0'
+       group by category order by num desc
+   </select>
+</mapper>

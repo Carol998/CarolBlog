@@ -1,5 +1,6 @@
 package Blog.service;
 
+import Blog.common.StringUtil;
 import Blog.entity.Comment;
 import org.apache.ibatis.annotations.Param;
 
@@ -17,4 +18,8 @@ public interface CommentService {
     Comment findById(Long id);
 
     int update(Comment comment);
+
+    void deleteCommentById(Long id);
+
+    void deleteChildrenCom(String children);
 }

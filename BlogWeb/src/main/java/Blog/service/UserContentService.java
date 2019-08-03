@@ -42,4 +42,30 @@ public interface UserContentService {
      * @return
      */
     void updateById(UserContent content);
+
+    /**
+     * 根据用户名字查找分类
+     * @param uid
+     * @return
+     */
+    List<UserContent> findCategoryByuid(Long uid);
+
+    /**
+     * 查找分类文章
+     * @param category
+     * @param uid
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    PageHelper.Page<UserContent> findByCategroy(String category,Long uid,Integer pageNum,Integer pageSize);
+
+    /**
+     * 查找私密文章
+     * @param uid
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    PageHelper.Page<UserContent> findPersonalContent(Long uid,Integer pageNum,Integer pageSize);
 }
