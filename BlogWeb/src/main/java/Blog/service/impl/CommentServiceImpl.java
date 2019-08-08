@@ -18,6 +18,7 @@ public class CommentServiceImpl implements CommentService {
 
     /**
      * 根据文章id查找所有评论
+     *
      * @param cid
      * @return
      */
@@ -28,6 +29,7 @@ public class CommentServiceImpl implements CommentService {
 
     /**
      * 根据文章id查询所有的一级评论
+     *
      * @param cid
      * @return
      */
@@ -38,17 +40,19 @@ public class CommentServiceImpl implements CommentService {
 
     /**
      * 根据文章id与二级评论的ids查询所有的评论
+     *
      * @param cid
      * @param children
      * @return
      */
     @Override
     public List<Comment> findAllChildrenComment(long cid, String children) {
-        return commentMapper.findAllChildrenComment(cid,children);
+        return commentMapper.findAllChildrenComment(cid, children);
     }
 
     /**
      * 添加评论
+     *
      * @param comment
      * @return
      */
@@ -59,6 +63,7 @@ public class CommentServiceImpl implements CommentService {
 
     /**
      * 根据id查找评论
+     *
      * @param id
      * @return
      */
@@ -85,10 +90,17 @@ public class CommentServiceImpl implements CommentService {
         Example.Criteria criteria = example.createCriteria();
         List<Object> list = new ArrayList<Object>();
         String[] split = children.split(",");
-        for(int i=0;i<split.length;i++){
+        for (int i = 0; i < split.length; i++) {
             list.add(split[i]);
         }
-        criteria.andIn("id",list);
+        criteria.andIn("id", list);
         commentMapper.deleteByExample(example);
+    }
+
+    @Override
+    public void deleteCommentByCid(Long cid) {
+        Comment comment = new Comment();
+        comment.setConId(cid);
+        commentMapper.delete(comment);
     }
 }

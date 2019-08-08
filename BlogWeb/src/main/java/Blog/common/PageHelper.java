@@ -32,7 +32,7 @@ public class PageHelper implements Interceptor {
 
 	/**
 	 * 开始分页
-	 * 
+	 *
 	 * @param pageNum
 	 * @param pageSize
 	 */
@@ -43,7 +43,7 @@ public class PageHelper implements Interceptor {
 
 	/**
 	 * 结束分页并返回结果，该方法必须被调用，否则localPage会一直保存下去，直到下一次startPage
-	 * 
+	 *
 	 * @return
 	 */
 	public static Page endPage() {
@@ -115,7 +115,7 @@ public class PageHelper implements Interceptor {
 	 * 只拦截这两种类型的 <br>
 	 * StatementHandler <br>
 	 * ResultSetHandler
-	 * 
+	 *
 	 * @param target
 	 * @return
 	 */
@@ -136,7 +136,7 @@ public class PageHelper implements Interceptor {
 
 	/**
 	 * 修改原SQL为分页SQL
-	 * 
+	 *
 	 * @param sql
 	 * @param page
 	 * @return
@@ -151,7 +151,7 @@ public class PageHelper implements Interceptor {
 
 	/**
 	 * 获取总记录数
-	 * 
+	 *
 	 * @param sql
 	 * @param connection
 	 * @param mappedStatement
@@ -159,7 +159,7 @@ public class PageHelper implements Interceptor {
 	 * @param page
 	 */
 	private void setPageParameter(String sql, Connection connection,
-			MappedStatement mappedStatement, BoundSql boundSql, Page page) {
+								  MappedStatement mappedStatement, BoundSql boundSql, Page page) {
 		// 记录总记录数
 		String countSql = "select count(0) from (" + sql + ") as total";
 		PreparedStatement countStmt = null;
@@ -209,7 +209,7 @@ public class PageHelper implements Interceptor {
 
 	/**
 	 * 代入参数值
-	 * 
+	 *
 	 * @param ps
 	 * @param mappedStatement
 	 * @param boundSql
@@ -217,8 +217,8 @@ public class PageHelper implements Interceptor {
 	 * @throws SQLException
 	 */
 	private void setParameters(PreparedStatement ps,
-			MappedStatement mappedStatement, BoundSql boundSql,
-			Object parameterObject) throws SQLException {
+							   MappedStatement mappedStatement, BoundSql boundSql,
+							   Object parameterObject) throws SQLException {
 
 		ParameterHandler parameterHandler = new DefaultParameterHandler(
 				mappedStatement, parameterObject, boundSql);
@@ -230,7 +230,7 @@ public class PageHelper implements Interceptor {
 	 */
 	public static class Page<E> implements Serializable {
 		/**
-		 * 
+		 *
 		 */
 		private static final long serialVersionUID = 1L;
 
@@ -313,7 +313,51 @@ public class PageHelper implements Interceptor {
 			return total;
 		}
 
+		private int startPage;//开始页码（按钮上的数字）
+		private int endPage;//结束页码（按钮上的数字）
+
+		public int getStartPage() {
+			return startPage;
+		}
+
+		public void setStartPage(int startPage) {
+			this.startPage = startPage;
+		}
+
+		public int getEndPage() {
+			return endPage;
+		}
+
+		public void setEndPage(int endPage) {
+			this.endPage = endPage;
+		}
 		public void setTotal(long total) {
+			//计算总页码数：
+			int totalCount = Integer.parseInt(total+"");
+			pages=(totalCount+pageSize-1)/pageSize;
+			//计算页面的页码中“显示”的起始页码和结束页码
+			//一般显示的页码较好的效果是最多显示10个页码
+			//算法是前5后4，不足补10
+			//计算显示的起始页码（根据当前页码计算）：当前页码-5
+			startPage = pageNum - 5;
+			if(startPage < 1){
+				startPage = 1;//页码修复
+			}
+
+			//计算显示的结束页码（根据开始页码计算）：开始页码+9
+			endPage = startPage + 9;
+			if(endPage > pages){//页码修复
+				endPage = pages;
+			}
+
+			//起始页面重新计算（根据结束页码计算）：结束页码-9
+			startPage = endPage - 9;
+			if(startPage < 1){
+				startPage = 1;//页码修复
+			}
+
+			System.out.println(startPage +"和" +endPage);
+
 			this.total = total;
 		}
 

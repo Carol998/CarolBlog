@@ -1,5 +1,6 @@
 package Blog.dao;
 
+import Blog.entity.User;
 import Blog.entity.UserContent;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.security.access.method.P;
@@ -17,4 +18,18 @@ public interface UserContentMapper extends Mapper<UserContent> {
      * @return
      */
     List<UserContent> findCategoryByUid(@Param("uid") Long uid);
+
+    /**
+     * 插入文章，返回id
+     * @param userContent
+     * @return
+     */
+    int insertUserContent (UserContent userContent);
+
+    /**
+     * 连接查询UserContent
+     * @param userContent
+     * @return
+     */
+    List<UserContent> findByJoin(UserContent userContent);
 }

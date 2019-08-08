@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -38,66 +39,32 @@ public class BaseController {
     @Autowired
     private UserContentService userContentService;
 
-    public boolean isLogin(Long id){
-        if(userService.findById(id)==null){
-            return false;
-        }
-        else
-            return true;
-    }
-
-    public User getUser(Long id){
-        return userService.findById(id);
-    }
-
-    public List<UserContent> getUserContentList(Long uid){
-        List<UserContent> list = userContentService.findByUserId( uid );
-        return list;
-    }
-
-    public List<UserContent> getAllUserContentList(){
-        List<UserContent> list = userContentService.findAll();
-        return list;
-    }
-
-    public PageHelper.Page<UserContent> findAll(UserContent content, Integer pageNum, Integer pageSize){
-        PageHelper.Page<UserContent> page = userContentService.findAll( content,pageNum ,pageSize);
-        return page;
-    }
-
-    public PageHelper.Page<UserContent> findAll(UserContent content, Comment comment, Integer pageNum, Integer pageSize){
-        PageHelper.Page<UserContent> page = userContentService.findAll( content,comment,pageNum ,pageSize);
-        return page;
-    }
-
-    public PageHelper.Page<UserContent> findAllByUpvote(UserContent content, Integer pageNum, Integer pageSize){
-        PageHelper.Page<UserContent> page = userContentService.findAllByUpvote( content,pageNum ,pageSize);
-        return page;
-    }
-
     /**
      * 获取request
+     *
      * @return
      */
-    public static HttpServletRequest getRequest(){
+    public static HttpServletRequest getRequest() {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         return attributes.getRequest();
     }
 
     /**
      * 获取response
+     *
      * @return
      */
-    public static HttpServletResponse getResponse(){
-        HttpServletResponse httpServletResponse =((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getResponse();
+    public static HttpServletResponse getResponse() {
+        HttpServletResponse httpServletResponse = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getResponse();
         return httpServletResponse;
     }
 
-    public static HttpSession getSession(){
+    public static HttpSession getSession() {
         HttpSession session = null;
         try {
             session = getRequest().getSession();
-        }catch (Exception e){}
+        } catch (Exception e) {
+        }
         return session;
     }
 
@@ -114,5 +81,38 @@ public class BaseController {
             }
         }
         return request.getRemoteAddr();
+    }
+
+    public boolean isLogin(Long id) {
+        return userService.findById(id) != null;
+    }
+
+    public User getUser(Long id) {
+        return userService.findById(id);
+    }
+
+    public List<UserContent> getUserContentList(Long uid) {
+        List<UserContent> list = userContentService.findByUserId(uid);
+        return list;
+    }
+
+    public List<UserContent> getAllUserContentList() {
+        List<UserContent> list = userContentService.findAll();
+        return list;
+    }
+
+    public PageHelper.Page<UserContent> findAll(UserContent content, Integer pageNum, Integer pageSize) {
+        PageHelper.Page<UserContent> page = userContentService.findAll(content, pageNum, pageSize);
+        return page;
+    }
+
+    public PageHelper.Page<UserContent> findAll(UserContent content, Comment comment, Integer pageNum, Integer pageSize) {
+        PageHelper.Page<UserContent> page = userContentService.findAll(content, comment, pageNum, pageSize);
+        return page;
+    }
+
+    public PageHelper.Page<UserContent> findAllByUpvote(UserContent content, Integer pageNum, Integer pageSize) {
+        PageHelper.Page<UserContent> page = userContentService.findAllByUpvote(content, pageNum, pageSize);
+        return page;
     }
 }

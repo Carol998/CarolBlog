@@ -9,4 +9,11 @@ public interface UpvoteService {
     void updateUpvote(Upvote upvote);
 
     void addUpvote(Upvote upvote);
+
+    /**
+     * 根据文章id删除upvote信息
+     *
+     * @param cid
+     */
+    void deleteUpvoteByCid(Long cid);
 }

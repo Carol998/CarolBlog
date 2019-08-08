@@ -4,13 +4,12 @@ import Blog.common.PageHelper;
 import Blog.dao.CommentMapper;
 import Blog.dao.UserContentMapper;
 import Blog.entity.Comment;
-import Blog.entity.User;
 import Blog.entity.UserContent;
 import Blog.service.UserContentService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import tk.mybatis.mapper.entity.Example;
 import org.springframework.stereotype.Service;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -26,24 +25,23 @@ public class UserContentServiceImpl implements UserContentService {
     @Override
     public PageHelper.Page<UserContent> findAll(UserContent content, Integer pageNum, Integer pageSize) {
         //分页查询
-        System.out.println("第"+pageNum+"页");
-        System.out.println("每页显示："+pageSize+"条");
+        System.out.println("第" + pageNum + "页");
+        System.out.println("每页显示：" + pageSize + "条");
         PageHelper.startPage(pageNum, pageSize);//开始分页
-        List<UserContent> list =  userContentMapper.select( content );
+        List<UserContent> list = userContentMapper.findByJoin(content);
         PageHelper.Page endPage = PageHelper.endPage();//分页结束
+        List<UserContent> result = endPage.getResult();
         return endPage;
     }
 
     @Override
     public PageHelper.Page<UserContent> findAll(UserContent content, Comment comment, Integer pageNum, Integer pageSize) {
         //分页查询
-        System.out.println("第"+pageNum+"页");
-        System.out.println("每页显示："+pageSize+"条");
+        System.out.println("第" + pageNum + "页");
+        System.out.println("每页显示：" + pageSize + "条");
         PageHelper.startPage(pageNum, pageSize);//开始分页
-        List<UserContent> list =  userContentMapper.select( content );
-
-        List<Comment> comments = commentMapper.select( comment );
-
+        List<UserContent> list = userContentMapper.select(content);
+        List<Comment> comments = commentMapper.select(comment);
         PageHelper.Page endPage = PageHelper.endPage();//分页结束
         List<UserContent> result = endPage.getResult();
         return endPage;
@@ -55,6 +53,15 @@ public class UserContentServiceImpl implements UserContentService {
         e.setOrderByClause("upvote DESC");
         PageHelper.startPage(pageNum, pageSize);//开始分页
         List<UserContent> list = userContentMapper.selectByExample(e);
+        PageHelper.Page endPage = PageHelper.endPage();//分页结束
+        return endPage;
+    }
+
+    @Override
+    public PageHelper.Page<UserContent> findAll(Integer pageNum, Integer pageSize) {
+        //分页查询
+        PageHelper.startPage(pageNum, pageSize);//开始分页
+        List<UserContent> list = userContentMapper.findByJoin(null);
         PageHelper.Page endPage = PageHelper.endPage();//分页结束
         return endPage;
     }
@@ -80,7 +87,11 @@ public class UserContentServiceImpl implements UserContentService {
     public UserContent findById(long id) {
         UserContent userContent = new UserContent();
         userContent.setId(id);
-        return userContentMapper.selectOne(userContent);
+        List<UserContent> userContentList = userContentMapper.findByJoin(userContent);
+        if (userContentList != null && userContentList.size() > 0) {
+            return userContentList.get(0);
+        } else
+            return null;
     }
 
     @Override
@@ -96,7 +107,7 @@ public class UserContentServiceImpl implements UserContentService {
     @Override
     public PageHelper.Page<UserContent> findByCategroy(String category, Long uid, Integer pageNum, Integer pageSize) {
         UserContent userContent = new UserContent();
-        if(StringUtils.isNotBlank(category) && !"null".equals(category)){
+        if (StringUtils.isNotBlank(category) && !"null".equals(category)) {
             userContent.setCategory(category);
         }
         userContent.setuId(uid);
@@ -112,9 +123,19 @@ public class UserContentServiceImpl implements UserContentService {
         UserContent userContent = new UserContent();
         userContent.setuId(uid);
         userContent.setPersonal("1");
-        PageHelper.startPage(pageNum,pageSize);
+        PageHelper.startPage(pageNum, pageSize);
         userContentMapper.select(userContent);
         PageHelper.Page endPage = PageHelper.endPage();
         return endPage;
+    }
+
+    @Override
+    public int addUserContent(UserContent userContent) {
+        return userContentMapper.insertUserContent(userContent);
+    }
+
+    @Override
+    public void deleteContentById(Long id) {
+        userContentMapper.deleteByPrimaryKey(id);
     }
 }

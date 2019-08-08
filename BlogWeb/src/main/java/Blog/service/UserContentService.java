@@ -2,6 +2,7 @@ package Blog.service;
 
 import Blog.common.PageHelper;
 import Blog.entity.Comment;
+import Blog.entity.User;
 import Blog.entity.UserContent;
 
 import java.util.List;
@@ -11,6 +12,7 @@ public interface UserContentService {
     PageHelper.Page<UserContent> findAll(UserContent content, Comment comment, Integer pageNum, Integer pageSize);
     PageHelper.Page<UserContent> findAllByUpvote(UserContent content, Integer pageNum, Integer pageSize);
 
+    PageHelper.Page<UserContent> findAll(Integer pageNum, Integer pageSize);
     /**
      * 添加文章
      * @param content
@@ -68,4 +70,17 @@ public interface UserContentService {
      * @return
      */
     PageHelper.Page<UserContent> findPersonalContent(Long uid,Integer pageNum,Integer pageSize);
+
+    /**
+     * 添加文章，返回主键id
+     * @param userContent
+     * @return
+     */
+    int addUserContent(UserContent userContent);
+
+    /**
+     * 删除文章
+     * @param id
+     */
+    void deleteContentById(Long id);
 }

@@ -1,6 +1,5 @@
 package Blog.service;
 
-import Blog.common.StringUtil;
 import Blog.entity.Comment;
 import org.apache.ibatis.annotations.Param;
 
@@ -11,7 +10,7 @@ public interface CommentService {
 
     List<Comment> findAllFirstComment(@Param("cid") long cid);
 
-    List<Comment> findAllChildrenComment(@Param("cid") long cid,@Param("children") String children);
+    List<Comment> findAllChildrenComment(@Param("cid") long cid, @Param("children") String children);
 
     int insertComment(Comment comment);
 
@@ -22,4 +21,11 @@ public interface CommentService {
     void deleteCommentById(Long id);
 
     void deleteChildrenCom(String children);
+
+    /**
+     * 根据文章id删除评论
+     *
+     * @param cid
+     */
+    void deleteCommentByCid(Long cid);
 }

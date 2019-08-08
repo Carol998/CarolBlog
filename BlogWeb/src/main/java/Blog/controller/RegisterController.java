@@ -29,68 +29,71 @@ public class RegisterController {
     private UserService userService;
 
     @Autowired
-    private RedisTemplate<String,String> redisTemplate;
+    private RedisTemplate<String, String> redisTemplate;
 
     /**
      * 验证电话号码是否被注册
+     *
      * @param model
      * @param phone
      * @return
      */
     @ResponseBody
     @RequestMapping(value = "/checkPhone")
-    public Map<String,String> checkPhone(Model model, @RequestParam(value = "phone",required = false) String phone){
-        Map<String,String> map = new HashMap<>();
+    public Map<String, String> checkPhone(Model model, @RequestParam(value = "phone", required = false) String phone) {
+        Map<String, String> map = new HashMap<>();
         //该电话号码未注册
-        if(userService.findByPhone(phone)==null){
-            map.put("message","success");
-        }
-        else{
-            map.put("message","fail");
+        if (userService.findByPhone(phone) == null) {
+            map.put("message", "success");
+        } else {
+            map.put("message", "fail");
         }
         return map;
     }
 
     /**
      * 邮箱是否被注册
+     *
      * @param model
      * @param email
      * @return
      */
     @ResponseBody
     @RequestMapping(value = "checkEmail")
-    public Map<String,String> checkEmail(Model model,@RequestParam(value = "email",required = false) String email){
-        Map<String,String> map = new HashMap<>();
-        if(userService.findByEmail(email)==null){
-            map.put("message","success");
-        }else{
-            map.put("message","fail");
+    public Map<String, String> checkEmail(Model model, @RequestParam(value = "email", required = false) String email) {
+        Map<String, String> map = new HashMap<>();
+        if (userService.findByEmail(email) == null) {
+            map.put("message", "success");
+        } else {
+            map.put("message", "fail");
         }
         return map;
     }
 
     /**
      * 验证码的验证
+     *
      * @param model
      * @param code
      * @return
      */
     @ResponseBody
     @RequestMapping(value = "/checkCode")
-    public Map<String,String> checkCode(Model model,@RequestParam(value = "code",required = false) String code){
-        Map<String,String> map = new HashMap<>();
+    public Map<String, String> checkCode(Model model, @RequestParam(value = "code", required = false) String code) {
+        Map<String, String> map = new HashMap<>();
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         //获取之前存入到session中的验证码
-        String vcode =  (String) attributes.getRequest().getSession().getAttribute(CodeCaptchaServlet.VERCODE_KEY);
-        if(code.equals(vcode))
-            map.put("message","success");
+        String vcode = (String) attributes.getRequest().getSession().getAttribute(CodeCaptchaServlet.VERCODE_KEY);
+        if (code.equals(vcode))
+            map.put("message", "success");
         else
-            map.put("message","fail");
+            map.put("message", "fail");
         return map;
     }
 
     /**
      * 用户注册
+     *
      * @param model
      * @param phone
      * @param email
@@ -100,53 +103,54 @@ public class RegisterController {
      */
     @RequestMapping(value = "/doRegister")
     public String register(Model model,
-                           @RequestParam(value = "phone",required = false) String phone,
-                           @RequestParam(value = "email",required = false) String email,
-                           @RequestParam(value = "password",required = false) String password,
-                           @RequestParam(value = "nickName",required = false) String nickName,
-                           @RequestParam(value = "code",required = false) String code){
+                           @RequestParam(value = "phone", required = false) String phone,
+                           @RequestParam(value = "email", required = false) String email,
+                           @RequestParam(value = "password", required = false) String password,
+                           @RequestParam(value = "nickName", required = false) String nickName,
+                           @RequestParam(value = "code", required = false) String code) {
 
-        if(StringUtils.isBlank(code)){
-            model.addAttribute("error","非法验证码,请重新注册");
+        if (StringUtils.isBlank(code)) {
+            model.addAttribute("error", "非法验证码,请重新注册");
             return "../register";
         }
-        if(checkCode(code)==0) {
-            model.addAttribute("error","验证码不正确，请重新输入");
+        if (checkCode(code) == 0) {
+            model.addAttribute("error", "验证码不正确，请重新输入");
             return "../register";
-        }else if(checkCode(code)==-1){
-            model.addAttribute("error","验证码超时");
+        } else if (checkCode(code) == -1) {
+            model.addAttribute("error", "验证码超时");
             return "../register";
         }
 
         User u = userService.findByEmail(email);
-        if (u!=null) {
+        if (u != null) {
             model.addAttribute("error", "该用户已存在,请重新注册");
             return "../register";
         }
         User user = new User();
         user.setPhone(phone);
         user.setEmail(email);
-        user.setPassword(MD5Util.encodeToHex(Constant.SALT +password));
+        user.setPassword(MD5Util.encodeToHex(Constant.SALT + password));
         user.setNickName(nickName);
         user.setImgUrl("/images/img.jpg");
         //用于用户激活，state为0时表示该用户未激活
         user.setState("0");
         user.setEnable("0");
         //生成邮件激活码
-        String emailCode = MD5Util.encodeToHex("salt"+email+password);
+        String emailCode = MD5Util.encodeToHex("salt" + email + password);
         //24小时有效，保存激活码
-        redisTemplate.opsForValue().set(email,code, 24, TimeUnit.HOURS);
+        redisTemplate.opsForValue().set(email, code, 24, TimeUnit.HOURS);
         userService.register(user);
         //发送邮件激活码
-        SendEmail.sendEmailMessage(email,emailCode);
-        String message = email+","+emailCode;
-        model.addAttribute("message",message);
+        SendEmail.sendEmailMessage(email, emailCode);
+        String message = email + "," + emailCode;
+        model.addAttribute("message", message);
         return "/register/registerSuccess";
     }
 
 
     /**
      * 验证验证码的正确性
+     *
      * @param code
      * @return
      */
@@ -156,7 +160,7 @@ public class RegisterController {
         String vcode = (String) attributes.getRequest().getSession().getAttribute(CodeCaptchaServlet.VERCODE_KEY);
         if (vcode.equalsIgnoreCase(code))
             return 1;
-        else if(vcode == null)
+        else if (vcode == null)
             return -1;
         else
             return 0;
@@ -164,34 +168,36 @@ public class RegisterController {
 
     /**
      * 激活成功后，再次发送邮件接口
+     *
      * @param model
      * @return
      */
     @RequestMapping("/sendEmail")
     @ResponseBody
-    public Map<String,Object> sendEmail(Model model){
-        Map map = new HashMap<String,Object>();
+    public Map<String, Object> sendEmail(Model model) {
+        Map map = new HashMap<String, Object>();
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         //获取之前存入到session中的验证码
         String vcode = (String) attributes.getRequest().getSession().getAttribute(CodeCaptchaServlet.VERCODE_KEY);
         String email = attributes.getRequest().getParameter("email");
-        SendEmail.sendEmailMessage(email,vcode);
-        map.put("success","success");
+        SendEmail.sendEmailMessage(email, vcode);
+        map.put("success", "success");
         return map;
     }
 
     @RequestMapping("/register")
-    public String register(Model model){
+    public String register(Model model) {
         return "../register";
     }
 
     /**
      * 邮件激活
+     *
      * @param model
      * @return
      */
     @RequestMapping("/activecode")
-    public String active(Model model){
+    public String active(Model model) {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         String vcode = (String) attributes.getRequest().getSession().getAttribute(CodeCaptchaServlet.VERCODE_KEY);
         String email = attributes.getRequest().getParameter("email");
@@ -199,27 +205,27 @@ public class RegisterController {
 
         //首先判断该用户是否以及被激活
         User u = userService.findByEmail(email);
-        if(u!=null && u.getState().equals("1")){
-            model.addAttribute("success","该账户已激活，请登陆");
+        if (u != null && u.getState().equals("1")) {
+            model.addAttribute("success", "该账户已激活，请登陆");
             return "../login";
         }
 
         //验证码是否过期
-        if(code == null){
-            model.addAttribute("fail","验证码过期，请重新注册");
+        if (code == null) {
+            model.addAttribute("fail", "验证码过期，请重新注册");
             userService.deleteByEmail(email);
             return "/register/activeFail";
         }
 
-        if(StringUtils.isNotBlank(vcode) && vcode.equals(code) ){
+        if (StringUtils.isNotBlank(vcode) && vcode.equals(code)) {
             User user = userService.findByEmail(email);
             user.setState("1");
             user.setEnable("1");
             userService.update(user);
-            model.addAttribute("email","验证码正确，激活成功");
+            model.addAttribute("email", "验证码正确，激活成功");
             return "/register/activeSuccess";
         }
-        model.addAttribute("fail","激活码错误，请重新激活");
+        model.addAttribute("fail", "激活码错误，请重新激活");
         return "/register/activeFail";
     }
 }

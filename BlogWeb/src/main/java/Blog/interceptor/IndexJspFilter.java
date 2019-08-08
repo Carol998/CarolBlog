@@ -4,6 +4,8 @@ import Blog.dao.UserContentMapper;
 import Blog.entity.UserContent;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
+import tk.mybatis.mapper.entity.Example;
+
 import javax.servlet.*;
 
 import java.io.IOException;
@@ -25,7 +27,9 @@ public class IndexJspFilter implements Filter{
         //手动获取UserContent对象
         UserContentMapper userContentMapper = ctx.getBean(UserContentMapper.class);
         PageHelper.startPage(null, null);//开始分页
-        List<UserContent> list =  userContentMapper.select( null );
+        Example example = new Example(UserContent.class);
+        example.setOrderByClause("rpt_time DESC");
+        List<UserContent> list =  userContentMapper.findByJoin(null);
         PageHelper.Page endPage = PageHelper.endPage();//分页结束
         request.setAttribute("page", endPage );
         chain.doFilter(request, response);
